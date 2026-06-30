@@ -1,7 +1,12 @@
 
-const boton = document.querySelector(".menu-toggle");
-const menu = document.querySelector("nav");
+window.addEventListener("DOMContentLoaded", () => {
 
-boton.addEventListener("click", () => {
-    menu.classList.toggle("activo");
-});
+    const boton = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("nav");
+
+    boton.addEventListener("click", () => {
+        console.log("click funcionando");
+        menu.classList.toggle("activo");
+    });
+
+})
