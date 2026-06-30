@@ -889,8 +889,9 @@ nav.activo a:nth-child(6){ animation-delay:0.3s; }
             transform:translateY(-50%);
             font-size:30px;
             cursor:pointer;
-            line-height:1;
             padding:8px 10px;
+
+            z-index:10000;
         }
 
         nav{
