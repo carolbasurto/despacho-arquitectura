@@ -11,6 +11,7 @@ body {
         justify-content:space-between;
         align-items:center;
         padding:30px 60px;
+        position:relative;
 
         background-color:white;
         box-shadow:0 2px 4px rgba(0,0,0,0.10);
@@ -881,10 +882,14 @@ nav.activo a:nth-child(6){ animation-delay:0.3s; }
         }
 
         .menu-toggle{
+            display:block;
             position:absolute;
             right:20px;
             top:50%;
             transform:translateY(-50%);
+            font-size:30px;
+            cursor:pointer;
+            line-height:1;
             padding:8px 10px;
         }
 
@@ -893,9 +898,9 @@ nav.activo a:nth-child(6){ animation-delay:0.3s; }
         }
 
             nav ul{
-                flex-wrap:wrap;
-                justify-content:center;
-                gap:10px;
+                display:flex;
+                flex-direction:column;
+                gap:0px;
             }
 
             nav a{
