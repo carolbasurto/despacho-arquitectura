@@ -412,7 +412,7 @@ body {
         transition:.5s;
     }
 
-        .imagenproyectos:hover img{
+        .imagenproyecto:hover img{
             transform:scale(1.08);
         }
 
@@ -846,6 +846,35 @@ body {
     }
 }
 
+@keyframes menuDown{
+    from{
+        opacity:0;
+        transform:translateY(-15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+nav.activo a:nth-child(1){ animation-delay:0.05s; }
+nav.activo a:nth-child(2){ animation-delay:0.1s; }
+nav.activo a:nth-child(3){ animation-delay:0.15s; }
+nav.activo a:nth-child(4){ animation-delay:0.2s; }
+nav.activo a:nth-child(5){ animation-delay:0.25s; }
+nav.activo a:nth-child(6){ animation-delay:0.3s; }
+
+@keyframes fadeItem{
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 
 
 
@@ -854,12 +883,16 @@ body {
     header{
         flex-direction:row;
         justify-content:space-between;
-        padding:20px 25px;
+        padding:15px 20px;
         position:relative;
     }
+        header h1{
+            font-size:24px;
+        }
 
         .menu-toggle{
             display:block;
+            font-size:30px;
         }
 
         nav ul{
@@ -870,34 +903,41 @@ body {
         }
 
             nav.activo{
-                display:block;
                 position:absolute;
                 top:100%;
                 left:0;
                 width:100%;
                 background:white;
-                box-shadow:0 10px 25px rgba(0,0,0,.8);
+                box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+                animation: menuDown 0.35s ease-out forwards;
             }
 
                 nav.activo ul{
                     flex-direction:column;
                     gap:0;
+                    display:flex;
                 }
 
                     nav.activo a{
                         display:block;
                         padding:18px 25px;
                         border-bottom:1px solid #eee;
+
+                        animation: fadeItem 0.4s ease forwards;
                     }
 
     .hero{
-        height:70vh;
+        height:80vh;
+        padding:0 20px;
     }
         .hero h1{
-            font-size:42px;
+            font-size:32px;
+            line-height:1.2;
         }
         .hero p{
             font-size:20px;
+            max-width:100%;
         }
 
 
@@ -928,6 +968,9 @@ body {
     .destacados-grid{
         flex-direction:column;
     }
+        .destacado img{
+            height:260px;
+        }
 
     .galeria{
         grid-template-columns:1fr;
@@ -935,6 +978,17 @@ body {
     }
         .galeria-proyectos{
             column-count:1;
+        }
+
+    .whatsapp-float{
+        width:55px;
+        height:55px;
+        bottom:15px;
+        right:15px;
+    }   
+        .whatsapp-float img{
+            width:28px;
+            height:28px;
         }
 
     .footer-content{
@@ -949,4 +1003,15 @@ body {
     .contenedor-servicios{
         grid-template-columns:1fr;
     }
+
+    .destacados,
+    .arquitectura,
+    .manifiesto,
+    .servicios,
+    .biblioteca,
+    .contacto{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
 }
